@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="{% static 'registration/css/signup.css' %}"/>
+  </head>
+  <body>
+    <div class = "wrapper">
+    {% block title %} <div class = "text">Create an Account</div> {% endblock %}
+    
+      <a href="{% url 'registration:login' %}" class="redirect_a">
+      <button type="submit" class="loginbut">Already have an account? Log in!</button>
+      </a>
+      {% block content %}
+      <form method="post" class="form-group">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="registerButton">Register</button>
+      </form>
+    {% endblock %}
+    </div>
+  </body>
+</html>

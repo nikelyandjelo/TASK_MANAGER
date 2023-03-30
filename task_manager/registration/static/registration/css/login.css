@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(255, 255, 255);
+  }
+  .loginWrapper{
+    width: 80%;
+    max-width: 720px;
+  }
+  .requiredField{
+    font-size: 30px;
+  }
+  .formLogin{
+    position: relative;
+    top: 28vh;
+    left: 37vw;
+  }
+  #id_username{
+    width: 50%;
+    height: 35px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    background: rgba(49, 169, 177, 0.749)
+  }
+  #id_password{
+    width: 50%;
+    height: 35px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    background: rgba(49, 169, 177, 0.749)
+  }
+  .loginButton{
+    font-size: 24px;
+    position: relative;
+    top: 3vh;
+    left: 14vw;
+    background-color: rgba(49, 169, 177, 0.749);
+    border-radius: 50px;
+  }
+  

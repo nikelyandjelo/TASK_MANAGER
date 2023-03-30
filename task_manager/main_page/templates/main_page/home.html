@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+  </head>
+  <body>
+    
+    <a href="{% url 'main_page:logout' %}">Log out</a>
+    <a href="{% url 'main_page:achievements' %}">Achievements</a>
+    <a href="{% url 'main_page:categories' %}">Categories</a>
+
+    <img src="{{pfp}}">
+
+    <p>Tasks</p>
+    {% for t in tasks %}
+      <li>{{ t.name }}</li>
+      <li>{{ t.description }}</li>
+      <li>{{ t.is_completed }}</li>
+      <p></p>
+    {% endfor %}
+
+    <p>Habits</p>
+    {% for h in habits %}
+      <li>{{ h.name }}</li>
+      <li>{{ h.description }}</li>
+      <li>{{ h.is_good }}</li>
+      <li>{{ h.tracking_meter }}</li>
+      <p></p>
+
+    {% endfor %}
+
+    <p>Dailies</p>
+    {% for d in dailies %}
+      <li>{{ d.name }}</li>
+      <li>{{ d.description }}</li>
+      <li>{{ d.is_completed }}</li>
+      <p></p>
+
+    {% endfor %}
+  </body>
+</html>
+
